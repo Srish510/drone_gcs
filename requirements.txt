@@ -1,0 +1,8 @@
+Tkinter
+customtkinter
+pymavlink
+pyserial
+numpy
+Pillow
+matplotlib
+opencv-python
