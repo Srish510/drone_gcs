@@ -94,6 +94,19 @@ README.md                 # Project documentation
    ```
    cd drone-gcs
    ```
+3. Create a python virtual environment
+   ```
+   python -m venv .venv
+   ```
+4. Enable the python virtual environment
+   For Mac/Linux
+   ```
+   source .venv/bin/activate
+   ```
+   For Windows
+   ```
+   .venv\Scripts\activate
+   ```
 3. Install the required dependencies:
    ```
    pip install -r requirements.txt
