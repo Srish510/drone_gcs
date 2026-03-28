@@ -40,23 +40,16 @@ The application is modular, with clear separation between UI, controllers, commu
 
 ```mermaid
 graph TD
-  A[User Interface (UI)] -->|Commands| B[Controllers]
-  B -->|Control Signals| C[Communication Layer]
-  C -->|MAVLink/UDP/TCP/Serial| D[Drone]
-  C -->|Telemetry| B
-  B -->|State Updates| E[Models]
-  E -->|Data| A
-  A -->|Mission Planning| B
-  B -->|Logs| F[Utils]
-  F -->|Helpers| B
-  F -->|Helpers| A
-  subgraph src/
-    A
-    B
-    C
-    E
-    F
-  end
+  UI[User Interface] -->|Commands| Controllers
+  Controllers -->|Control Signals| Communication
+  Communication -->|MAVLink/UDP/TCP/Serial| Drone
+  Communication -->|Telemetry| Controllers
+  Controllers -->|State Updates| Models
+  Models -->|Data| UI
+  UI -->|Mission Planning| Controllers
+  Controllers -->|Logs| Utils
+  Utils -->|Helpers| Controllers
+  Utils -->|Helpers| UI
 ```
 
 ## Features
