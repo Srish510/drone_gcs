@@ -10,7 +10,6 @@ from ui.widgets.log_panel import LogPanel
 from ui.dialogs.connection_dialog import ConnectionDialog
 from ui.dialogs.mission_planner_dialog import MissionPlannerDialog
 from ui.dialogs.settings_dialog import SettingsDialog
-from ui.dialogs.workshop_dialog import WorkshopDialog
 from communication.telemetry_parser import parse_telemetry_data
 from config.settings import Config
 
@@ -65,11 +64,6 @@ class MainWindow(ctk.CTk):
                                       fg_color="#8111bd", hover_color="#c010f1",
                                       command=self.open_mission_planner)
         self.mission_plan_btn.pack(side="left", padx=4, pady=4)
-
-        self.workshop_btn = ctk.CTkButton(toolbar, text="Workshop", width=80,
-                                      fg_color="#1161bd", hover_color="#1071f1",
-                                      command=self.open_workshop)
-        self.workshop_btn.pack(side="left", padx=4, pady=4)
 
         #If needed, add new buttons here (before this) and implement their callbacks
 
@@ -155,10 +149,6 @@ class MainWindow(ctk.CTk):
 
     def open_settings(self):
         SettingsDialog(self)
-        
-    def open_workshop(self):
-        WorkshopDialog(self, self._send_command)
-
 
     #Connection management:
     def on_connected(self, connection, conn_info: dict):
