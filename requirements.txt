@@ -6,3 +6,4 @@ numpy
 Pillow
 matplotlib
 opencv-python
+tkintermapview
