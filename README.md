@@ -8,6 +8,7 @@ Ground Control Station (GCS) is a comprehensive application for monitoring and c
 
 ## Table of Contents
 - [Overview](#overview)
+- [Screenshots](#screenshots)
 - [Architecture](#architecture)
 - [Features](#features)
 - [Folder Structure](#folder-structure)
@@ -29,6 +30,12 @@ This GCS application enables users to:
 - Analyze logs and visualize flight data
 - Send images from the GCS to the drone for advanced mission scenarios (e.g., image-based navigation or payload delivery).
 - Communicate with drones over **UDP, TCP, and serial (radio) connections** for maximum flexibility and compatibility.
+
+## Screenshots
+
+Main Window:
+
+![Main Window](images/main_window.png)
 
 ## Architecture
 
